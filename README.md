@@ -1,4 +1,4 @@
-# Developer-Profile-Generator
+# Developer Profile Generator
 A command-line application that dynamically generates a PDF profile from a GitHub username
 
 The user will be prompted for a favorite color, which will be used as the background color for cards.
