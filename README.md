@@ -9,9 +9,9 @@ A PDF will be populated with the following:
  - Profile image
  - User name
  - Links to the following:
-    1. User location via Google Maps
-    2. User GitHub profile
-    3. User blog
+    - User location via Google Maps
+    - User GitHub profile
+    - User blog
  - User bio
  - Number of public repositories
  - Number of followers
