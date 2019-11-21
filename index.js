@@ -7,7 +7,10 @@ const inquirer = require("inquirer");
 // ];
 
 
-inquirer
+// return username
+// axios api get 
+
+return inquirer
     .prompt([{
         type: "input",
         name: "username",
@@ -19,18 +22,53 @@ inquirer
         message: "What is your favorite color?",
         choices: ["green", "blue", "pink", "red"]
     }])
-    .then(function({ username }) {
-        const queryUrl = `https://api.github.com/users/${username}/repos?per_page=100`;
+    .then((reponses) => {
+
+        const {username, color} = reponses;
+        console.log(username);
+        console.log(color);
+        const queryUrl = `https://api.github.com/users/${username}`;
 
         axios
-
         .get(queryUrl)
         .then((response) => {
-            console.log(response);
-            console.log(response.data);
-        })
+            // profile image 
+            const profImg = response.data.avatar_url;
+            console.log(profImg);
+            // user's name
+            const name = response.data.name;
+            console.log(name);
+            // links:
+                // location
+                const location = response.data.location;
+                console.log(location);
+                // GitHub profile 
+                const profLink = response.data.url;
+                console.log(profLink);
+                // blog 
+                const blog = response.data.blog;
+                console.log(blog);
+            // user bio
+            const bio = response.data.bio;
+            console.log(bio);
+            // # of repos
 
+            // # of followers
+            const followers = response.data.followers;
+            console.log(followers);
+            // # of GitHub stars
+           
+            // # of users following
+           const following = response.data.following;
+            console.log(following);
+        })
     });
+
+
+// return color 
+
+
+
 
 
 
