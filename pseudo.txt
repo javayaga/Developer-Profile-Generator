@@ -1,0 +1,31 @@
+Developer Profile Generator 
+
+install npm packages: 
+    - inquirer
+    - axios
+    - open 
+
+
+inquirer prompts for: 
+    - color
+    - GitHub username
+
+axios call for:
+    - profile image
+    - name
+    - links to:
+        - location via Goolge Maps
+        - GitHub profile
+        - user blog
+    - user bio
+    - # of repos
+    - # of followers 
+    - # of stars
+    - # of users following 
+
+
+build PDF with template literal HTML:
+    - populated with content return from axios
+    - color pulled from inquirer response
+
+PDF opens automatically once generated 
