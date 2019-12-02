@@ -173,8 +173,8 @@ function generateHTML(data) {
       </style>
     </head>
     <body>
-         <div class="wrapper">
-            <div class="photo-header">
+        <div class="wrapper">
+          <div class="photo-header">
               <img src=${data.img}>
               <h1>Hi!<h1>
               <h2>My name is ${data.name}</h2>
@@ -184,16 +184,38 @@ function generateHTML(data) {
                   <a href="${data.gitLink}"><i class="fab fa-github-alt"> GitHub   </i>
                   <a href="${data.blog}"><i class="fas fa-rss"></i> Blog   </i>
                 </h6>
-            </div> 
+              </div>
+          </div> 
+        <main>
+        <div class="conatainer">
+          <div class="row">
+            <h4 class="col">${data.bio}</h4>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                  <h4>Public Repositories</h4>
+              <div>
+              <div class="card">
+                  <h4>GitHub Stars</h4>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                  <h4>Followers</h4>
+              <div>
+              <div class="card">
+                  <h4>Following</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        </main>
+       
          
          
          
-         
-         
-         
-         
-         
-         </div>
+      
     </body>`
     
 }
