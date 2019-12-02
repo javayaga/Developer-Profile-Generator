@@ -103,7 +103,7 @@ function generateHTML(data) {
          .photo-header img {
          width: 250px;
          height: 250px;
-         border-radius: 50%;
+         border-radius: 50%;  
          object-fit: cover;
          margin-top: -75px;
          border: 6px solid ${colors[data.color].photoBorderColor};
@@ -173,5 +173,22 @@ function generateHTML(data) {
       </style>
     </head>
     <body>
+         <div class="wrapper">
+            <div class="photo-header">
+              <h1>Hi!<h1>
+              <h2>My name is ${data.name}</h2>
+              <
+
+            </div> 
+         
+         
+         
+         
+         
+         
+         
+         
+         </div>
     </body>`
+    
         }

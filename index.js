@@ -34,36 +34,21 @@ return inquirer
         axios
         .get(queryUrl)
         .then((response) => {
-            // profile image 
-            const profImg = response.data.avatar_url;
-            console.log(profImg);
-            // user's name
-            const name = response.data.name;
-            console.log(name);
-            // links:
-                // location
-                const location = response.data.location;
-                console.log(location);
-                // GitHub profile 
-                const profLink = response.data.url;
-                console.log(profLink);
-                // blog 
-                const blog = response.data.blog;
-                console.log(blog);
-            // user bio
-            const bio = response.data.bio;
-            console.log(bio);
-            // # of repos
-
-            // # of followers
-            const followers = response.data.followers;
-            console.log(followers);
-            // # of GitHub stars
-           
-            // # of users following
-           const following = response.data.following;
-            console.log(following);
+            // data object created with query response
+            const data = {
+                color: color,
+                img: response.data.avatar_url,
+                name: response.data.name,
+                location: response.data.location,
+                gitLink: response.data.url,
+                blog: response.data.blog,
+                bio: response.data.bio,
+                followers: response.data.followers,
+                following: response.data.following
+            };
         })
+      
+    
     });
 
 
@@ -74,12 +59,14 @@ return inquirer
 
 
 
-function writeToFile(fileName, data) {
-    pdf.create(html).toFile("user.pdf", function(error){
-        if(error) console.log(error);
-    })
+// function writeToFile(fileName, data) {
+//     pdf.create(html).toFile("user.pdf", function(error){
+//         if(error) return console.log(error);
+
+//         open("user.pdf");
+//     })
  
-}
+// }
 
 // function init() {
 
