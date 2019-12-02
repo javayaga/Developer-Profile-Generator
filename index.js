@@ -2,6 +2,7 @@ const axios = require("axios");
 const fs = require("fs");
 const inquirer = require("inquirer");
 const pdf = require("html-pdf");
+const open = require("open");
 
 // const questions = [
   
@@ -74,7 +75,9 @@ return inquirer
 
 
 function writeToFile(fileName, data) {
-    
+    pdf.create(html).toFile("user.pdf", function(error){
+        if(error) console.log(error);
+    })
  
 }
 
