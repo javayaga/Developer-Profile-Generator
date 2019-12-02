@@ -177,7 +177,7 @@ function generateHTML(data) {
             <div class="photo-header">
               <h1>Hi!<h1>
               <h2>My name is ${data.name}</h2>
-              <
+              
 
             </div> 
          
@@ -191,4 +191,6 @@ function generateHTML(data) {
          </div>
     </body>`
     
-        }
+}
+
+module.exports = generateHTML;

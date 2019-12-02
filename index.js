@@ -1,16 +1,10 @@
 const axios = require("axios");
 const fs = require("fs");
 const inquirer = require("inquirer");
+const generateHTML = require("./generateHTML.js")
 const pdf = require("html-pdf");
 const open = require("open");
 
-// const questions = [
-  
-// ];
-
-
-// return username
-// axios api get 
 
 return inquirer
     .prompt([{
@@ -25,7 +19,6 @@ return inquirer
         choices: ["green", "blue", "pink", "red"]
     }])
     .then((reponses) => {
-
         const {username, color} = reponses;
         console.log(username);
         console.log(color);
@@ -46,28 +39,19 @@ return inquirer
                 followers: response.data.followers,
                 following: response.data.following
             };
-        })
-      
-    
+
+            console.log(data); 
+            const html = generateHTML(data);
+            return writeToFile(html);
+        });
     });
 
 
-// return color 
-
-
-
-
-
-
-// function writeToFile(fileName, data) {
-//     pdf.create(html).toFile("user.pdf", function(error){
-//         if(error) return console.log(error);
-
-//         open("user.pdf");
-//     })
- 
-// }
-
-// function init() {
-
-// init();
+function writeToFile(html) {
+    pdf.create(html).toFile("user.pdf", function(error){
+        if(error) return console.log(error);
+    
+        open("user.pdf");
+    })
+}
+     
