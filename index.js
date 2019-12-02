@@ -27,6 +27,7 @@ return inquirer
         axios
         .get(queryUrl)
         .then((response) => {
+            console.log(response);
             // data object created with query response
             const data = {
                 color: color,
@@ -36,6 +37,7 @@ return inquirer
                 gitLink: response.data.url,
                 blog: response.data.blog,
                 bio: response.data.bio,
+                repos: response.data.public_repos,
                 followers: response.data.followers,
                 following: response.data.following
             };
