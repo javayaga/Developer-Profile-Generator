@@ -175,10 +175,15 @@ function generateHTML(data) {
     <body>
          <div class="wrapper">
             <div class="photo-header">
+              <img src=${data.img}>
               <h1>Hi!<h1>
               <h2>My name is ${data.name}</h2>
-              
-
+              <div class="links-nav">
+                <h6 class="nav-link">
+                  <i class="fas fa-location-arrow"> ${data.location}   </i>
+                  <a href="${data.gitLink}"><i class="fab fa-github-alt"> GitHub   </i>
+                  <a href="${data.blog}"><i class="fas fa-rss"></i> Blog   </i>
+                </h6>
             </div> 
          
          
