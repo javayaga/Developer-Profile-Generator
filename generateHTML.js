@@ -187,41 +187,42 @@ function generateHTML(data) {
               </div>
           </div> 
         <main>
-        <div class="conatainer">
-          <div class="row">
-            <h4 class="col">${data.bio}</h4>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="row">
+          <div class="conatainer">
+            <div class="row">
+              <div class="col">
+                <h4>${data.bio}</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
                   <div class="card">
                     <h4>Public Repositories</h4>
-                    <h5>${data.repos}</h5>
+                    <h4>${data.repos}</h4>
                   </div>
               <div>
-              <div class="row">
+              <div class="col">
                   <div class="card">
-                    <h4>GitHub Stars</h4>
-    
+                    <h4>Followers</h4>
+                    <h4>${data.followers}</h4>
                   </div>
               </div>
             </div>
-            <div class="col">
-              <div class="row">
-                <div class="card">
-                  <h4>Followers</h4>
-                  <h5>${data.followers}</h5>
-                </div>
+            <div class="row">
+              <div class="col">
+                 <div class="card">
+                  <h4>GitHub Stars</h4>
+                 
+                 </div>
               <div>
-              <div class="row">
+              <div class="col">
                 <div class="card">
                   <h4>Following</h4>
                   <h5>${data.following}</h5>
                 </div>
               </div>
             </div>
+           </div>
           </div>
-        </div>
         </main>
        
          
